@@ -1,28 +1,31 @@
-const express = require("express");
+// const express = require("express");
+import express from 'express';
+import dotenv from 'dotenv';
 const app = express();
-require("dotenv").config();
+
+dotenv.config();
 const port = process.env.PORT || 404; // 404 for toubleshooting
 
 //parse
 app.use(express.json());
 
 // for login
-app.post("/login", (res, req) => {
+app.post("/login", (req, res) => {
   console.log("Someone logged in");
 });
 
 //register
-app.post("/register", (res, req) => {
+app.post("/register", (req, res) => {
   console.log("Someone registered");
 });
 
 //logout
-app.post("/logout", (res, req) => {
+app.post("/logout", (req, res) => {
   console.log("Someone logoout");
 });
 
 //fetch job post
-app.get("/fetch-job-post", (req, req) => {});
+app.get("/fetch-job-post", (req, res) => {});
 
 //create job post
 app.post("/create-job-post", (req, res) => {
@@ -30,7 +33,7 @@ app.post("/create-job-post", (req, res) => {
 });
 
 //fetch user 
-app.get("/user-profile", (res, req) => {
+app.get("/user-profile", (req, res) => {
   console.log("user profile");
 });
 

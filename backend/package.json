@@ -1,10 +1,26 @@
-{
+  {
     "dependencies": {
       "dotenv": "^16.4.7",
       "express": "^4.21.2",
+      "morgan": "^1.10.0",
+      "cross-env": "^7.0.3",
       "nodemon": "^3.1.9"
     },
     "scripts": {
-      "start": "node server.js"
+      "start": "cross-env NODE_ENV=development node ./dist/main.js",
+      "dev" : "cross-env NODE_ENV=development node ./dist/main.js",
+      "move_cfg": "copyfiles config.json ./dist/",
+      "build": "tsc -p tsconfig.json && npm run move_cfg"
+    },
+    "type": "module",
+    "author": "AIPC TEAM",
+    "license": "UNLICENSED",
+    "devDependencies": {
+      "@types/express": "^4.17.21",
+      "@types/morgan": "^1.9.9",
+      "@types/node": "^20.11.19",
+      "copyfiles": "^2.4.1",
+      "rimraf": "^5.0.5",
+      "typescript": "^5.3.3"
     }
   }
