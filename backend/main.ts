@@ -4,7 +4,7 @@ import https from 'https';
 const port = process.env.PORT || 3001;
 const secureport = process.env.SPORT || 3002;
 //userdefined boolean
-var sslSecure = false;
+var sslSecure = false; //If we use NGINX we can disable this.s
 
 if (sslSecure) {
   //Define your ssl key and certificate here
