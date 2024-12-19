@@ -20,9 +20,6 @@ function loadConfig(filePath: string): AppConfig {
 
   return config;
 }
-
-// Example usage
-const configFilePath = "./config.yml"; // Path to your YAML config file
-const CONFIG = loadConfig(configFilePath);
+const CONFIG = loadConfig("./config.yml");
 
 export default CONFIG;
