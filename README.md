@@ -1,4 +1,6 @@
-# AIPC-Job-Board Backend
+# AIPC-Job-Board
+
+## Backend Setup
 
 ### Setup
 `npm install`
