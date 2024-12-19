@@ -19,11 +19,11 @@
     },
     "exclude": ["node_modules"],
     "include": [
-        "db/*",
-        "auth/*",
-        "schema/*",
-        "dbStore/*",
-        "config.json"
+        "core/*"
+        // "auth/*",
+        // "schema/*",
+        // "dbStore/*",
+        // "config.json"
     ],
     "files": [
         "main.ts"
