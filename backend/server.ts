@@ -1,10 +1,6 @@
 // const express = require("express");
 import express from 'express';
-import dotenv from 'dotenv';
 const app = express();
-
-dotenv.config();
-const port = process.env.PORT || 404; // 404 for toubleshooting
 
 //parse
 app.use(express.json());
@@ -37,8 +33,4 @@ app.get("/user-profile", (req, res) => {
   console.log("user profile");
 });
 
-//port
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
 export default app;
