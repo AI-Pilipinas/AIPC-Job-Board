@@ -1,4 +1,4 @@
-import app from './server';
+import app from './server.js';
 import fs from 'fs';
 import https from 'https';
 const port = process.env.PORT || 3001;
