@@ -1,0 +1,6 @@
+Database:
+  Host: "localhost"
+  Port: 5432
+  DB_Username: "root"
+  DB_Password: "somepassword"
+  DB_Name: "db_namehere"
