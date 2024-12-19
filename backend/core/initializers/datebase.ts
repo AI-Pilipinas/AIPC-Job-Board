@@ -1,8 +1,11 @@
 import { Sequelize, DataTypes } from 'sequelize';
+import CONFIG from './config.js'
 
 // Initialize Sequelize
-const SequelizeDatabase = new Sequelize('your_database', 'your_user', 'your_password', {
-  host: 'localhost',
+const DBConfig = CONFIG.Database
+const SequelizeDatabase = new Sequelize(DBConfig.DB_Name, DBConfig.DB_Name, DBConfig.DB_Password, {
+  host: DBConfig.Host,
+  port: DBConfig.Port,
   dialect: 'postgres',
 });
 
